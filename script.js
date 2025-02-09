@@ -34,10 +34,15 @@ document.querySelector('#user-icon').onclick = () => {
 
 // change header background color and shadow on scroll
 
-let header = document.querySelector('header');
 
-window.addEventListener('scroll', () => {
-    header.classList.toggle('shadow', window.scrollY > 0);
+
+window.addEventListener("scroll", function () {
+    let header = document.querySelector("header");
+    if (window.scrollY > 50) {
+        header.classList.add("shadow");
+    } else {
+        header.classList.remove("shadow");
+    }
 });
 
 // scroll top 
@@ -91,3 +96,17 @@ ScrollReveal().reveal(".footer", {
     ...ScrollRevealOption,
     interval: 100,
 })
+
+
+const productsContainer = document.querySelector(".products-content");
+let scrollAmount = 0;
+
+function autoScroll() {
+    scrollAmount += 1;
+    if (scrollAmount >= productsContainer.scrollWidth / 2) {
+        scrollAmount = 0; // Reset scroll to create an infinite effect
+    }
+    productsContainer.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+setInterval(autoScroll, 30);
