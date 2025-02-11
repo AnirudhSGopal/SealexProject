@@ -18,12 +18,12 @@ a {
     scroll-padding-top: 2rem;
     list-style: none;
     text-decoration: none !important;
-    
+   
     
 
 }
 html, body {
-    background: white !important;
+    background-color: #D3D3D3;
     text-decoration: none !important;
 }
 
@@ -78,6 +78,7 @@ html::-webkit-scrollbar-thumb {
     max-width: 968px;
     margin: auto;
     width: 100%;
+   
     
 }
 
@@ -97,7 +98,7 @@ header {
 }
 
 header.shadow {
-    background-color: var(--grey-color);
+    background-color: var(--bg-color);
     box-shadow: 1px 3px 8px rgb(216, 216, 216);
     transition: 0.3s;
 
@@ -397,6 +398,7 @@ header.shadow {
 
 .home-img {
     position: relative;
+    margin: 55px;
 }
 
 .home-img::after {
