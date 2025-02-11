@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     boxes.forEach(box => {
         box.addEventListener("click", function () {
-            const imgSrc = this.querySelector("img").src;
+            const imgSrc = this.querySelector("Img").src;
             const title = this.querySelector("h3").textContent;
             const code = this.querySelector(".code-color").textContent;
             const description = "This is a sample description for " + title; // Add real descriptions later
